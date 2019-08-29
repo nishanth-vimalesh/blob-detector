@@ -1,1 +1,4 @@
-# blob-detector
+# Laplacian Blob Detector
+
+## Algorithm outline
+
