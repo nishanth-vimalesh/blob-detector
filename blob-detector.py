@@ -1,3 +1,17 @@
+import numpy as np
+import cv2
+from matplotlib import pyplot as plt
+import math
+import time
+
+START = time.time()
+img = cv2.imread('Images/sunflowers.jpg', 0)
+img1 = cv2.imread('Images/sunflowers.jpg')
+img = img/255
+print('Image shape : ',img.shape)
+plt.imshow(img, cmap = 'gray')
+plt.show()
+
 def calcSigma(no_s,k,s):
     sigma = []
     for i in range(no_s):
@@ -74,21 +88,6 @@ def maximaDetection(img,convout,sigma,no_s,threshold):
     print('Time taken for maxima reduction : ', end1-start1)
     print('Total no. of minimas : ', no_minimas)
     return img
-
-
-import numpy as np
-import cv2
-from matplotlib import pyplot as plt
-import math
-import time
-
-START = time.time()
-img = cv2.imread('Images/sunflowers.jpg', 0)
-img1 = cv2.imread('Images/sunflowers.jpg')
-img = img/255
-print('Image shape : ',img.shape)
-plt.imshow(img, cmap = 'gray')
-plt.show()
 
 no_s = 15
 k = 1.24
